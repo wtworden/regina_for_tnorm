@@ -3,57 +3,15 @@ Self-contained Python packages of Regina
 
 The program `Regina`_ is a powerful tool for studying low-dimensional
 topology. It comes with a full `Python`_ interface that lets one
-interact with it programmatically without writing any C++ code. Our
-goal here is to provide self-contained binaries ("wheels") of Regina's
-Python package that can be installed in seconds from Python's `PyPI`_
-package repository using ``pip``.
+interact with it programmatically without writing any C++ code. 
 
-The current version is somewhat experimental and is based on a
-pre-release version of Regina; it is offered for macOS (10.14 and
-newer) and Linux, but not Windows. To try it out, do::
-
-  python3 -m pip install --user --pre --only-binary :all: -U regina
-  python3 -m regina.test
-
-On older versions of Linux, e.g. Ubuntu 18.04, you may need to update
-``pip`` first via::
-
-  python3 -m pip install --user --upgrade pip wheel
-
-For more on using Regina in Python see the `main docs`_.
-
-These binaries are produced and maintained by Marc Culler, Nathan
-Dunfield, and Matthias Goerner, though of course 99.9% of the code and
-credit is due to Ben Burton and the other authors of Regina
-itself. This project evolved out of Goerner's `sageRegina`_
-but works both with and without `SageMath`_. To install and test in
-SageMath do the following in a terminal window::
-
-  sage -pip install --user --pre --only-binary :all: -U regina
-  sage -python -m regina.test
-
-One can also do this from **inside** SageMath (including from a
-notebook) by::
-
-  sage: %pip install --user --pre --only-binary :all: -U regina
-  sage: import regina.test; regina.test.runTests()
-
-Please report any technical problems via the `issue tracker`_ on the
-`GitHub site`_ devoted to this repackaging of Regina.
-
-
-Building from source
---------------------
-
-If the available binaries do not work for you, you can try building
-from source.  You will need have the development versions of the
-libraries gmp, zlib, and bzip2 installed (which should be the case if
-using Sage)::
-
-  python3 -m pip install --user --pre --no-binary :all: -U -v regina
-
-This can easily take an hour or more.
-
+The program `Tnorm` requires Regina 6.X as a dependency, since Regina >=7 does not
+support transversely oriented spun normal surfaces. Since version 6.X or Regina is 
+no longer maintained elsewhere, this repo is an attempt to maintain Regina 6.X in a 
+form that will allow Tnorm to use it as a dependency. It is not recommended to install 
+this version of Regina directly. For a current version of Regina that can easily be
+installed in Python or Sage, https://github.com/3-manifolds/regina_wheels is a 
+better option.
 
 License
 -------
