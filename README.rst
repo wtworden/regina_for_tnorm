@@ -6,7 +6,7 @@ topology. It comes with a full `Python`_ interface that lets one
 interact with it programmatically without writing any C++ code. 
 
 The program `Tnorm` requires Regina 6.X as a dependency, since Regina >=7 does not
-support transversely oriented spun normal surfaces. Since version 6.X or Regina is 
+support transversely oriented spun normal surfaces. Since version 6.X of Regina is 
 no longer maintained elsewhere, this repo is an attempt to maintain Regina 6.X in a 
 form that will allow Tnorm to use it as a dependency. It is not recommended to install 
 this version of Regina directly. For a current version of Regina that can easily be
